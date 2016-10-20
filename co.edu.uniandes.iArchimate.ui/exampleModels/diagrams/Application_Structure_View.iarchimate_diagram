@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0" type="IArchimate" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_1270" type="2010">
+    <children xmi:type="notation:DecorationNode" xmi:id="_1271" type="5030" />
+    <children xmi:type="notation:BasicCompartment" xmi:id="_1272" type="7023" />
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_1273" />
+    <styles xmi:type="notation:FontStyle" xmi:id="_1274" fontName="Segoe UI" />
+    <styles xmi:type="notation:FillStyle" fillColor="16777088" xmi:id="_1275" />
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1276" />
+    <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.0" />
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1277" x="456" y="226" width="120" height="60" />
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1278" type="2010">
+    <children xmi:type="notation:DecorationNode" xmi:id="_1279" type="5030" />
+    <children xmi:type="notation:BasicCompartment" xmi:id="_1280" type="7023" />
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_1281" />
+    <styles xmi:type="notation:FontStyle" xmi:id="_1282" fontName="Segoe UI" />
+    <styles xmi:type="notation:FillStyle" fillColor="16777088" xmi:id="_1283" />
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1284" />
+    <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.1" />
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1285" x="456" y="86" width="120" height="60" />
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1286" type="2010">
+    <children xmi:type="notation:DecorationNode" xmi:id="_1287" type="5030" />
+    <children xmi:type="notation:BasicCompartment" xmi:id="_1288" type="7023" />
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_1289" />
+    <styles xmi:type="notation:FontStyle" xmi:id="_1290" fontName="Segoe UI" />
+    <styles xmi:type="notation:FillStyle" fillColor="16777088" xmi:id="_1291" />
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1292" />
+    <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.2" />
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1293" x="456" y="156" width="120" height="60" />
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1294" type="2010">
+    <children xmi:type="notation:DecorationNode" xmi:id="_1295" type="5030" />
+    <children xmi:type="notation:BasicCompartment" xmi:id="_1296" type="7023">
+      <children xmi:type="notation:Node" xmi:id="_1297" type="3025">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1298" type="5033" />
+        <children xmi:type="notation:BasicCompartment" xmi:id="_1299" type="7035" />
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_1300" />
+        <styles xmi:type="notation:FontStyle" xmi:id="_1301" fontName="Segoe UI" />
+        <styles xmi:type="notation:FillStyle" fillColor="16744576" xmi:id="_1302" />
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1303" />
+        <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.3/@components.0" />
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1304" x="204" y="50" width="140" height="60" />
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1305" type="3025">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1306" type="5033" />
+        <children xmi:type="notation:BasicCompartment" xmi:id="_1307" type="7035" />
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_1308" />
+        <styles xmi:type="notation:FontStyle" xmi:id="_1309" fontName="Segoe UI" />
+        <styles xmi:type="notation:FillStyle" fillColor="16744576" xmi:id="_1310" />
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1311" />
+        <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.3/@components.1" />
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1312" x="204" y="190" width="140" height="60" />
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1313" type="3025">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1314" type="5033" />
+        <children xmi:type="notation:BasicCompartment" xmi:id="_1315" type="7035" />
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_1316" />
+        <styles xmi:type="notation:FontStyle" xmi:id="_1317" fontName="Segoe UI" />
+        <styles xmi:type="notation:FillStyle" fillColor="16744576" xmi:id="_1318" />
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1319" />
+        <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.3/@components.2" />
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1320" x="34" y="120" width="140" height="60" />
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1321" type="3025">
+        <children xmi:type="notation:DecorationNode" xmi:id="_1322" type="5033" />
+        <children xmi:type="notation:BasicCompartment" xmi:id="_1323" type="7035" />
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_1324" />
+        <styles xmi:type="notation:FontStyle" xmi:id="_1325" fontName="Segoe UI" />
+        <styles xmi:type="notation:FillStyle" fillColor="16744576" xmi:id="_1326" />
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1327" />
+        <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.3/@components.3" />
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1328" x="204" y="120" width="140" height="60" />
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_1329" />
+    <styles xmi:type="notation:FontStyle" xmi:id="_1330" fontName="Segoe UI" />
+    <styles xmi:type="notation:FillStyle" fillColor="16756749" xmi:id="_1331" />
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1332" />
+    <element xmi:type="co.edu.uniandes.iArchimate:Element" href="../models/Application_Structure_View.iarchimate#//@components.3" />
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1333" x="24" y="30" width="397" height="309" />
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_1334" />
+  <element xmi:type="co.edu.uniandes.iArchimate:Model" href="../models/Application_Structure_View.iarchimate#/" />
+</notation:Diagram>
+

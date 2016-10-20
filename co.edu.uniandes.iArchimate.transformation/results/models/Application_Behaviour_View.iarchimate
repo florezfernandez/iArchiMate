@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.2" target="//@components.4" typeName="Realisation"/>
+  <relations source="//@components.2/@components.0/@components.0" target="//@components.3" typeName="Access"/>
+  <relations source="//@components.2/@components.0/@components.1" target="//@components.2/@components.0/@components.2" typeName="Triggering"/>
+  <relations source="//@components.2/@components.0/@components.1" target="//@components.0" typeName="Access"/>
+  <relations source="//@components.2/@components.0/@components.2" target="//@components.2/@components.0/@components.3" typeName="Triggering"/>
+  <relations source="//@components.2/@components.0/@components.3" target="//@components.2/@components.0/@components.0" typeName="Triggering"/>
+  <relations source="//@components.2/@components.0/@components.3" target="//@components.1" typeName="Access"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Request Data" typeName="DataObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Policy Data" typeName="DataObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Home &amp; Away Policy Administration" typeName="ApplicationComponent" relations="//@relations.0">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Policy Creation" typeName="ApplicationFunction">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Store Policy" typeName="ApplicationFunction" relations="//@relations.1"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Calculate Risk" typeName="ApplicationFunction" relations="//@relations.2 //@relations.3"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Calculate Premium" typeName="ApplicationFunction" relations="//@relations.4"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Create Policy" typeName="ApplicationFunction" relations="//@relations.5 //@relations.6"/>
+    </components>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer File Data" typeName="DataObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Policy Creation Service" typeName="ApplicationService"/>
+</co.edu.uniandes.iArchimate:Model>

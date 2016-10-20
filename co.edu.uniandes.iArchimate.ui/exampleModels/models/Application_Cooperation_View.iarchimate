@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.0/@components.0" target="//@components.0/@components.3" typeName="Composition"/>
+  <relations source="//@components.0/@components.0" target="//@components.0/@components.1" typeName="Composition"/>
+  <relations source="//@components.0/@components.2" target="//@components.0/@components.0" typeName="UsedBy"/>
+  <relations source="//@components.0/@components.3" target="//@components.1/@components.0" typeName="UsedBy"/>
+  <relations source="//@components.0/@components.3" target="//@components.1/@components.3" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.0" target="//@components.1/@components.1" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.2" target="//@components.1/@components.1" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.3" target="//@components.1/@components.1" typeName="UsedBy"/>
+  <relations source="//@components.2" target="//@components.0/@components.2" typeName="UsedBy"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Home &amp; Away Policy Administration" typeName="ApplicationComponent" relations="//@relations.0 //@relations.1"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Policy Data Management" typeName="ApplicationComponent"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Financial Application" typeName="ApplicationComponent" relations="//@relations.2"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer Data  Access" typeName="ApplicationComponent" relations="//@relations.3 //@relations.4"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Front office Applications">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Call center application" typeName="ApplicationComponent" relations="//@relations.5"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Web portal" typeName="ApplicationComponent"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="CRM System" typeName="ApplicationComponent" relations="//@relations.6"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Risk Assessment" typeName="ApplicationComponent" relations="//@relations.7"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Bank System" typeName="ApplicationComponent" relations="//@relations.8"/>
+</co.edu.uniandes.iArchimate:Model>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/co.edu.uniandes.iArchimate.feature_1.0.0.qualifier.jar" id="co.edu.uniandes.iArchimate.feature" version="1.0.0.qualifier">
+      <category name="co.edu.uniandes.category.iArchiMate"/>
+   </feature>
+   <category-def name="co.edu.uniandes.category.iArchiMate" label="iArchiMate"/>
+</site>

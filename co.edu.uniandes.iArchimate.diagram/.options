@@ -1,0 +1,7 @@
+# Tracing options for the co.edu.uniandes.iArchimate.diagram plug-in
+
+# Common issues
+co.edu.uniandes.iArchimate.diagram/debug=false
+
+# Visual IDs
+co.edu.uniandes.iArchimate.diagram/debug/visualID=false

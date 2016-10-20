@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.0" target="//@components.4" typeName="Association"/>
+  <relations source="//@components.0" target="//@components.7" typeName="Association"/>
+  <relations source="//@components.0" target="//@components.6" typeName="Association"/>
+  <relations source="//@components.0" target="//@components.12" typeName="Association"/>
+  <relations source="//@components.0" target="//@components.5" typeName="Association"/>
+  <relations source="//@components.5" target="//@components.11" typeName="Association"/>
+  <relations source="//@components.5" target="//@components.10" typeName="Association"/>
+  <relations source="//@components.7" target="//@components.3" typeName="Association"/>
+  <relations source="//@components.12" target="//@components.8" typeName="Association"/>
+  <relations source="//@components.12" target="//@components.2" typeName="Association"/>
+  <relations source="//@components.12" target="//@components.1" typeName="Association"/>
+  <relations source="//@components.12" target="//@components.9" typeName="Association"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Board" typeName="BusinessActor" relations="//@relations.0 //@relations.1 //@relations.2 //@relations.3 //@relations.4"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Legal Aid" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Document Processing SSC" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Finance" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="HRM" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Director of Sales" typeName="BusinessActor" relations="//@relations.5 //@relations.6"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Product Development" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Director of Finance" typeName="BusinessActor" relations="//@relations.7"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Home  &amp;  Away" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Car" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer Relations" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Intermediary Relations" typeName="BusinessActor"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Director of Operations" typeName="BusinessActor" relations="//@relations.8 //@relations.9 //@relations.10 //@relations.11"/>
+</co.edu.uniandes.iArchimate:Model>

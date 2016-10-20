@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Products &amp; Services Goals">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Client Satisfaction Goal" typeName="Principle"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="One Stop Principle" typeName="Principle"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Treatment Time Principle" typeName="Principle"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Financial Goals">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Costs Goal" typeName="Principle"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Occupancy Principle" typeName="Principle"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Licence Principle" typeName="Principle"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="ICT-Goals">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="TCO Goal" typeName="Principle"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Component Principle" typeName="Principle"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Infrastructure Principle" typeName="Principle"/>
+  </components>
+</co.edu.uniandes.iArchimate:Model>

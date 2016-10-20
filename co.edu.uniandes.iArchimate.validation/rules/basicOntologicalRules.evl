@@ -1,0 +1,824 @@
+context Element {	
+  	constraint hasRightElementTypeName {
+	   	check{
+	   	    if (self.typeName.name == 'NotSelected') { 
+	   	  		return false; 
+	   	  	} else { 
+	   	  		return true; 
+	   	  	}
+	   	}
+	   	message: 'The required feature \'typeName\' of \'<Model>::<Element>\' cannot have the value \'NotSelected\'' 
+	} 		
+}
+
+context Relation {
+  	constraint hasRightRelationTypeName {
+	   	check{
+	   	    if (self.typeName.name == 'NotSelected') { 
+	   	  		return false; 
+	   	  	} else { 
+	   	  		return true; 
+	   	  	}
+	   	}
+	   	message: 'The required feature \'typeName\' of \'<Model>::<Relation>\' cannot have the value \'NotSelected\'' 
+	} 		
+
+	critique validateComposition {
+		check {
+			if(self.typeName.name == 'Composition') {
+				if (self.source.typeName.name == self.target.typeName.name) {
+					return true; 	
+				}else if(self.source.typeName.name == 'BusinessRole') {
+					var validTargetNames = Collection {
+					'BusinessCollaboration',
+					'BusinessInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessCollaboration') {
+					var validTargetNames = Collection {
+					'BusinessInterface',
+					'BusinessRole'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessObject') {
+					var validTargetNames = Collection {
+					'Contract'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessProcess') {
+					var validTargetNames = Collection {
+					'BusinessFunction',
+					'BusinessInteraction'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessFunction') {
+					var validTargetNames = Collection {
+					'BusinessProcess',
+					'BusinessInteraction'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessInteraction') {
+					var validTargetNames = Collection {
+					'BusinessProcess',
+					'BusinessFunction'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationComponent') {
+					var validTargetNames = Collection {
+					'ApplicationCollaboration',
+					'ApplicationInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationCollaboration') {
+					var validTargetNames = Collection {
+					'ApplicationComponent',
+					'ApplicationInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationInterface') {
+					var validTargetNames = Collection {
+					'ApplicationCollaboration',
+					'ApplicationComponent'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Node') {
+					var validTargetNames = Collection {
+					'Device',
+					'SystemSoftware',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Device') {
+					var validTargetNames = Collection {
+					'Node',
+					'SystemSoftware',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'SystemSoftware') {
+					var validTargetNames = Collection {
+					'Device',
+					'Node',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}
+				return false;
+			}
+			return true;
+		} 
+		message : 'Cannot create Composition from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}
+
+	critique validateAggregation {
+		check {		
+			if(self.typeName.name == 'Aggregation') {
+				if (self.source.typeName.name == self.target.typeName.name) {
+					return true; 	
+				}else if(self.source.typeName.name == 'BusinessRole') {
+					var validTargetNames = Collection {
+					'BusinessCollaboration',
+					'BusinessInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessCollaboration') {
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessInterface',
+					'BusinessRole'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessObject') {
+					var validTargetNames = Collection {
+					'Contract'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessProcess') {
+					var validTargetNames = Collection {
+					'BusinessFunction',
+					'BusinessInteraction'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessFunction') {
+					var validTargetNames = Collection {
+					'BusinessProcess',
+					'BusinessInteraction'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessInteraction') {
+					var validTargetNames = Collection {
+					'BusinessProcess',
+					'BusinessFunction'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationComponent') {
+					var validTargetNames = Collection {
+					'ApplicationCollaboration',
+					'ApplicationInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationCollaboration') {
+					var validTargetNames = Collection {
+					'ApplicationComponent',
+					'ApplicationInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationInterface') {
+					var validTargetNames = Collection {
+					'ApplicationCollaboration',
+					'ApplicationComponent'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Node') {
+					var validTargetNames = Collection {
+					'Device',
+					'SystemSoftware',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Device') {
+					var validTargetNames = Collection {
+					'Node',
+					'SystemSoftware',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'SystemSoftware') {
+					var validTargetNames = Collection {
+					'Device',
+					'Node',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'SystemSoftware') {
+					var validTargetNames = Collection {
+					'Device',
+					'Node',
+					'InfrastructureInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Product') {
+					var validTargetNames = Collection {
+					'Contract'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Plateau') {
+					var validTargetNames = Collection {
+					'Principle'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}
+				return false;
+			}
+			return true;
+		} 
+		message : 'Cannot create Aggregation from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}
+
+	critique validateAssignment {
+		check {		
+			if(self.typeName.name == 'Assignment') {
+				if(self.source.typeName.name == 'BusinessActor') {
+					var validTargetNames = Collection {
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'BusinessService',
+					'Stakeholder',
+					'WorkPackage'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessRole') {
+					var validTargetNames = Collection {
+					'BusinessInterface',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'BusinessService',
+					'WorkPackage'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessCollaboration') {
+					var validTargetNames = Collection {
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'BusinessService'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessInterface') {
+					var validTargetNames = Collection {
+					'BusinessService'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Location') {
+					var validTargetNames = Collection {
+					'Location',
+					'Meaning',
+					'Value',
+					'Product',
+					'Driver',
+					'Assessment',
+					'Goal',
+					'Requirement',
+					'Constraint',
+					'Principle',
+					'Plateau',
+					'Gap'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationComponent') {
+					var validTargetNames = Collection {
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface',
+					'ApplicationFunction',
+					'ApplicationInteraction',
+					'BusinessService',
+					'ApplicationService'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationCollaboration'
+						or self.source.typeName.name == 'ApplicationInterface') {
+					var validTargetNames = Collection {
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface',
+					'BusinessService',
+					'ApplicationService'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Node'
+						or self.source.typeName.name == 'Device'
+						or self.source.typeName.name == 'SystemSoftware'
+						or self.source.typeName.name == 'InfrastructureInterface') {
+					var validTargetNames = Collection {
+					'InfrastructureFunction',
+					'InfrastructureService',
+					'Artifact'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create Assignment from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}
+	
+	critique validateRealization {
+		check {		
+			if(self.typeName.name == 'Realization') {
+				if(self.source.typeName.name == 'ApplicationComponent') {
+					var validTargetNames = Collection {
+					'ApplicationService'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessActor'
+						or self.source.typeName.name == 'BusinessRole') { 
+					var validTargetNames = Collection {
+					'Goal',
+					'Deliverable'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Principle') {
+					var validTargetNames = Collection {
+					'Goal'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'Requirement') {
+					var validTargetNames = Collection {
+					'Principle'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'WorkPackage') {
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'BusinessService') {
+					var validSourceNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'Representation', 
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface', 
+					'Node',
+					'Device',
+					'SystemSoftware',
+					'InfrastructureInterface',
+					'InfrastructureFunction',
+					'InfrastructureService',
+					'Artifact'};
+					if (validSourceNames.includes(self.source.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'Goal'
+						or self.target.typeName.name == 'Requirement'
+						or self.target.typeName.name == 'Principle'
+						or self.target.typeName.name == 'Constraint') {
+					var notValidSourceNames = Collection {
+					'Location',
+					'Value',
+					'Product', 
+					'Stakeholder',
+					'Driver',
+					'Assessment',
+					'Goal',
+					'Requirement',
+					'Constraint',
+					'Principle',
+					'WorkPackage',
+					'Gap',
+					'Plateau'};
+					if (notValidSourceNames.includes(self.source.typeName.name))
+					  	{return false;} else {return true;}
+				}else if(self.target.typeName.name == 'Node'
+						or self.target.typeName.name == 'Device'
+						or self.target.typeName.name == 'SystemSoftware'
+						or self.target.typeName.name == 'InfrastructureInterface'
+						or self.target.typeName.name == 'InfrastructureFunction'
+						or self.target.typeName.name == 'InfrastructureService'
+						or self.target.typeName.name == 'Artifact') {
+					var notValidSourceNames = Collection {
+					'BusinessObject',
+					'BusinessProcess',
+					'BusinessFunction', 
+					'BusinessInteraction',
+					'BusinessService',
+					'Contract',
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface',
+					'DataObject',
+					'ApplicationFunction',
+					'ApplicationFunction', 
+					'ApplicationInteraction',
+					'ApplicationService', 
+					'InfrastructureService'};
+					if (notValidSourceNames.includes(self.source.typeName.name))
+					  	{return false;} else {return true;}
+				}
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create Realization from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}
+	
+	critique validateUsedBy {
+		check {		
+			if(self.typeName.name == 'UsedBy') {
+				var validSourceNames;
+				var validTargetNames;			
+				validSourceNames = Collection {
+				'BusinessActor', 
+				'BusinessRole', 
+				'BusinessCollaboration', 
+				'BusinessInterface', 
+				'BusinessProcess', 
+				'BusinessFunction', 
+				'BusinessInteraction', 
+				'BusinessEvent', 
+				'BusinessService', 
+				'Product',
+				'ApplicationComponent', 
+				'ApplicationCollaboration', 
+				'ApplicationInterface', 
+				'ApplicationFunction', 
+				'ApplicationInteraction', 
+				'ApplicationService',
+				'Node', 
+				'Device', 
+				'SystemSoftware', 
+				'InfrastructureInterface', 
+				'InfrastructureFunction', 
+				'InfrastructureService',
+				'Artifact'};			
+				validTargetNames = Collection {
+				'BusinessActor', 
+				'BusinessRole', 
+				'BusinessCollaboration', 
+				'BusinessInterface',
+				'BusinessProcess', 
+				'BusinessFunction', 
+				'BusinessInteraction',
+				'BusinessService'};
+				if(validSourceNames.includes(self.source.typeName.name) 
+					and validTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				validSourceNames = Collection {
+				'Node', 
+				'Device', 
+				'SystemSoftware', 
+				'InfrastructureInterface',
+				'InfrastructureFunction', 
+				'InfrastructureService',
+				'Artifact'};			
+				validTargetNames = Collection {
+				'BusinessObject',
+				'Contract',
+				'ApplicationComponent',
+				'ApplicationCollaboration',
+				'ApplicationInterface',
+				'DataObject',
+				'ApplicationFunction',
+				'ApplicationInteraction',
+				'ApplicationService',
+				'Node',
+				'Device',
+				'SystemSoftware',
+				'InfrastructureInterface',
+				'InfrastructureFunction',
+				'InfrastructureService',
+				'Artifact'};			
+				if(validSourceNames.includes(self.source.typeName.name) 
+					and validTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				var validSourceAndTargetNames = Collection{
+				'ApplicationComponent', 
+				'ApplicationCollaboration', 
+				'ApplicationInterface',
+				'ApplicationFunction', 
+				'ApplicationInteraction', 
+				'ApplicationService'};
+				
+				if(validSourceAndTargetNames.includes(self.source.typeName.name) 
+					and validSourceAndTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create UsedBy from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}
+	
+	critique validateAccess {
+		check {		
+			if(self.typeName.name == 'Access') {
+				var validSourceNames;
+				var validTargetNames;			
+				validSourceNames = Collection {
+				'Node',
+				'Device',
+				'SystemSoftware',
+				'InfrastructureInterface',
+				'Network'};			
+				validTargetNames = Collection {
+				'Contract',
+				'ApplicationComponent',
+				'ApplicationCollaboration',
+				'ApplicationInterface',
+				'Stakeholder',
+				'DataObject',
+				'ApplicationFunction',
+				'ApplicationInteraction',
+				'ApplicationService'};
+				if(validSourceNames.includes(self.source.typeName.name) 
+					and validTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				if(self.source.typeName.name == 'InfrastructureInterface') {
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessObject',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'BusinessService'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'Contract'
+						or self.target.typeName.name == 'BusinessObject') {
+					var validSourceNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'BusinessEvent',
+					'BusinessService',
+					'Product',
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface',
+					'ApplicationFunction',
+					'ApplicationInteraction'};
+					if (validSourceNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'ApplicationInterface') {
+					var validSourceNames = Collection {
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface',
+					'ApplicationFunction',
+					'ApplicationInteraction'};
+					if (validSourceNames.includes(self.target.typeName.name))
+					  	return true;
+				}
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create Access from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}	
+			
+	critique validateTriggering {
+		check {		
+			if(self.typeName.name == 'Triggering') {
+				var validSourceNames;
+				var validTargetNames;			
+				validSourceNames = Collection {
+				'Node',
+				'Device',
+				'SystemSoftware',
+				'InfrastructureInterface', 
+				'InfrastructureFunction',
+				'InfrastructureService',
+				'Artifact'};
+				validTargetNames = Collection {
+				'Node',
+				'Device',
+				'SystemSoftware',
+				'InfrastructureInterface'};
+				if(validSourceNames.includes(self.source.typeName.name) 
+					and validTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				validSourceNames = Collection {
+				'BusinessActor',
+				'BusinessRole',
+				'BusinessCollaboration',
+				'BusinessInterface',
+				'BusinessProcess',
+				'BusinessFunction',
+				'BusinessInteraction',
+				'BusinessEvent',
+				'ApplicationComponent',
+				'ApplicationCollaboration'};
+				validTargetNames = Collection {
+				'BusinessActor',
+				'BusinessRole',
+				'BusinessCollaboration',
+				'BusinessInterface'};
+				if(validSourceNames.includes(self.source.typeName.name) 
+					and validTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				validSourceNames = Collection {
+				'BusinessActor',
+				'BusinessRole',
+				'BusinessProcess',
+				'BusinessFunction',
+				'BusinessInteraction',
+				'BusinessEvent'};
+				validTargetNames = Collection {
+				'BusinessProcess',
+				'BusinessFunction',
+				'BusinessInteraction',
+				'BusinessEvent',
+				'ApplicationComponent',
+				'ApplicationCollaboration'};
+				if(validSourceNames.includes(self.source.typeName.name) 
+					and validTargetNames.includes(self.target.typeName.name))
+					{return true;}			
+				if(self.source.typeName.name == 'BusinessCollaboration') {
+					var validTargetNames = Collection {
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'BusinessEvent', 
+					'ApplicationFunction',
+					'ApplicationInteraction'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'BusinessActor'
+						or self.target.typeName.name == 'BusinessRole') {
+					var validSourceNames = Collection {
+					'ApplicationInterface',
+					'ApplicationFunction',
+					'ApplicationInteraction',
+					'WorkPackage'};
+					if (validSourceNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'ApplicationComponent'
+						or self.target.typeName.name == 'ApplicationCollaboration') {
+					var validSourceNames = Collection {
+					'BusinessProcess',
+					'ApplicationInterface'};
+					if (validSourceNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'WorkPackage') {
+					var validSourceNames = Collection {
+					'BusinessActor',
+					'BusinessRole'};
+					if (validSourceNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.target.typeName.name == 'ApplicationFunction') {
+					var validSourceNames = Collection {
+					'ApplicationFunction',
+					'ApplicationInteraction'};
+					if (validSourceNames.includes(self.target.typeName.name))
+					  	return true;
+				}
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create Triggering from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}		
+					
+	critique validateFlow {
+		check {		
+			if(self.typeName.name == 'Flow') {
+				var validSourceTargetNames = Collection {
+				'Node',
+				'Device',
+				'SystemSoftware',
+				'InfrastructureInterface'};
+				if(validSourceTargetNames.includes(self.source.typeName.name)
+						and validSourceTargetNames.includes(self.target.typeName.name)) 
+					return true;
+				if(self.source.typeName.name == 'BusinessActor'
+						or self.source.typeName.name == 'BusinessRole') {
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface',
+					'ApplicationFunction',
+					'ApplicationInteraction',
+					'WorkPackage'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessCollaboration') { 
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessFunction',
+					'ApplicationComponent',
+					'ApplicationCollaboration'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessInterface') { 
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'BusinessProcess' 
+						or self.source.typeName.name == 'BusinessFunction'
+						or self.source.typeName.name == 'BusinessInteraction') { 
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessProcess',
+					'BusinessFunction',
+					'BusinessInteraction',
+					'ApplicationComponent',
+					'ApplicationCollaboration'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationComponent' 
+						or self.source.typeName.name == 'ApplicationCollaboration') { 
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole',
+					'BusinessCollaboration',
+					'BusinessInterface',
+					'BusinessProcess',
+					'ApplicationComponent',
+					'ApplicationCollaboration',
+					'ApplicationInterface'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'ApplicationFunction') { 
+					var validTargetNames = Collection {
+					'ApplicationFunction',
+					'ApplicationInteraction'};
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;				
+				}else if(self.source.typeName.name == 'InfrastructureFunction') {
+					var validTargetNames = Collection {
+					'InfrastructureFunction',
+					'InfrastructureService',
+					'Artifact'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}else if(self.source.typeName.name == 'WorkPackage') {
+					var validTargetNames = Collection {
+					'BusinessActor',
+					'BusinessRole'};				
+					if (validTargetNames.includes(self.target.typeName.name))
+					  	return true;
+				}
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create Flow from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}
+	
+	critique validateSpecialization {
+		check {		
+			if(self.typeName.name == 'Flow') {
+				if (self.source.typeName.name == self.target.typeName.name) 
+					return true;					
+				var validSourceTargetNames;
+				validSourceTargetNames = Collection {
+				'BusinessRole',
+				'BusinessCollaboration'};
+				if(validSourceTargetNames.includes(self.source.typeName.name)
+						and validSourceTargetNames.includes(self.target.typeName.name)) 
+					return true;
+				validSourceTargetNames = Collection {
+				'BusinessProcess',
+				'BusinessFunction',
+				'BusinessInteraction'};
+				if(validSourceTargetNames.includes(self.source.typeName.name)
+						and validSourceTargetNames.includes(self.target.typeName.name)) 
+					return true;
+				validSourceTargetNames = Collection {
+				'ApplicationComponent',
+				'ApplicationCollaboration',
+				'ApplicationInterface'};
+				if(validSourceTargetNames.includes(self.source.typeName.name)
+						and validSourceTargetNames.includes(self.target.typeName.name)) 
+					return true;
+				validSourceTargetNames = Collection {
+				'Node',
+				'Device',
+				'SystemSoftware'};
+				if(validSourceTargetNames.includes(self.source.typeName.name)
+						and validSourceTargetNames.includes(self.target.typeName.name)) 
+					return true;
+				return false;
+			}
+			return true;
+		}
+		message : 'Cannot create Flow from ' + self.source.typeName.name + ' to ' + self.target.typeName.name
+	}					
+}

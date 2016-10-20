@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.3/@components.0" target="//@components.1" typeName="Access"/>
+  <relations source="//@components.3/@components.1" target="//@components.0" typeName="Access"/>
+  <relations source="//@components.3/@components.3" target="//@components.2" typeName="Access"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Policy Data" typeName="DataObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer File Data" typeName="DataObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Damage Claim Data" typeName="DataObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Home &amp; Away Policy Administration" typeName="ApplicationComponent">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer Data  Access" typeName="ApplicationComponent" relations="//@relations.0"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Policy Data Management" typeName="ApplicationComponent" relations="//@relations.1"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Risk Assessment" typeName="ApplicationComponent"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claim Data Management" typeName="ApplicationComponent" relations="//@relations.2"/>
+  </components>
+</co.edu.uniandes.iArchimate:Model>

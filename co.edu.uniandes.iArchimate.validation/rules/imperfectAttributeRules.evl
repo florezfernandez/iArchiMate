@@ -1,0 +1,128 @@
+context ImperfectAttribute{
+	constraint isNumericRange {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'NumericRange'){
+				return rvh.isNumericRange(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for numeric range in ' + self.eClass().name		
+		fix {
+			title : 'Correct the format for numeric range'
+		  	do {
+		  		self.value := rvh.correctNumericRange(self.value);
+		   	}
+		}
+	}
+
+	constraint isNumericSet {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'NumericSet'){
+				return rvh.isNumericSet(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for numeric set in ' + self.eClass().name
+		fix {
+			title : 'Correct the format for numeric range'
+		  	do {
+		  		self.value := rvh.correctNumericSet(self.value);
+		   	}
+		}
+	}
+
+	constraint isNumericValueCertaintyDegree {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'NumericValueCertaintyDegree'){
+				return rvh.isNumericValueCertaintyDegree(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for numeric value with certainty degree set in ' + self.eClass().name
+		fix {
+			title : 'Correct the format for numeric value with certainty degree'
+		  	do {
+		  		self.value := rvh.correctNumericValueCertaintyDegree(self.value);
+		   	}
+		}
+	}
+
+	constraint isNumericSet {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'StringSet'){
+				return rvh.isStringSet(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for string set in ' + self.eClass().name
+		fix {
+			title : 'Correct the format for numeric range'
+		  	do {
+		  		self.value := rvh.correctNumericSet(self.value);
+		   	}
+		}
+	}
+
+	constraint isStringValueCertaintyDegree {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'StringValueCertaintyDegree'){
+				return rvh.isStringValueCertaintyDegree(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for string value with certainty degree set in ' + self.eClass().name
+		fix {
+			title : 'Correct the format for string value with certainty degree'
+		  	do {
+		  		self.value := rvh.correctStringValueCertaintyDegree(self.value);
+		   	}
+		}
+	}
+
+	constraint isLinguisticValue {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'LinguisticValue'){
+				return rvh.isLinguisticValue(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for linguistic value in ' + self.eClass().name
+		fix {
+			title : 'Correct the format for linguistic value'
+		  	do {
+		  		self.value := rvh.correctLinguisticValue(self.value);
+		   	}
+		}
+	}
+
+	constraint isNoValue {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper');
+			if(self.imperfectionType.name = 'NoValue'){
+				return rvh.isNoValue(self.value);
+			}else{
+				return true;
+			}
+		}
+		message : 'Incorrect format for no value in ' + self.eClass().name
+		fix {
+			title : 'Correct the format for no value'
+		  	do {
+		  		self.value := '?';
+		   	}
+		}
+	}
+}
+

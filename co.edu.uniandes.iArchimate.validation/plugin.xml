@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.epsilon.evl.emf.validation">
+      <constraintsBinding
+            constraints="rules/imperfectRelationRules.evl"
+            namespaceURI="http://co/edu/uniandes/iArchimate">
+      </constraintsBinding>
+      <constraintsBinding
+            constraints="rules/imperfectAttributeRules.evl"
+            namespaceURI="http://co/edu/uniandes/iArchimate">
+      </constraintsBinding>
+      <constraintsBinding
+            constraints="rules/basicOntologicalRules.evl"
+            namespaceURI="http://co/edu/uniandes/iArchimate">
+      </constraintsBinding>
+      <constraintsBinding
+            constraints="rules/generatedOntologicalRulesForAnalysis.evl"
+            namespaceURI="http://co/edu/uniandes/iArchimate">
+      </constraintsBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="co.edu.uniandes.iArchimate.diagram.diagnostic">
+      </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="org.eclipse.emf.ecore.diagnostic">
+      </markerResolutionGenerator>
+   </extension>
+   <extension
+         point="org.eclipse.epsilon.common.dt.tool">
+      <tool
+            class="co.edu.uniandes.iArchimate.validation.ImperfectAttributeRulesValidationHelper"
+            defaultName="ImperfectAttributeRulesValidationHelper">
+      </tool>
+      <tool
+            class="co.edu.uniandes.iArchimate.validation.ImperfectRelationRulesValidationHelper"
+            defaultName="ImperfectRelationRulesValidationHelper">
+      </tool>
+      <tool
+            class="co.edu.uniandes.iArchimate.validation.OntologicalRulesValidationHelper"
+            defaultName="OntologicalRulesValidationHelper">
+      </tool>
+      <tool
+            class="co.edu.uniandes.iArchimate.validation.Util"
+            defaultName="Util">
+      </tool>
+   </extension>
+
+</plugin>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/co.edu.uniandes.iArchimate/src"
+    modelPluginID="co.edu.uniandes.iArchimate" modelName="IArchimate" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>iArchimate.emf</foreignModel>
+  <genPackages prefix="IArchimate" disposableProviderFactory="true" ecorePackage="iArchimate.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iArchimate.ecore#//AttributeTypeValue">
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//AttributeTypeValue/EInt"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//AttributeTypeValue/EDouble"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//AttributeTypeValue/EString"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//AttributeTypeValue/EBoolean"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//AttributeTypeValue/EDate"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iArchimate.ecore#//ImperfectAttributeTypeValue">
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/NumericRange"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/NumericSet"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/StringSet"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/NumericValueCertaintyDegree"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/StringValueCertaintyDegree"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/LinguisticValue"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectAttributeTypeValue/NoValue"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iArchimate.ecore#//ImperfectRelationType">
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectRelationType/InstanceCertaintyDegree"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectRelationType/InstanceSet"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ImperfectRelationType/AbsentInstance"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iArchimate.ecore#//ElementTypeName">
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/NotSelected"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessActor"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessRole"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessCollaboration"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessInterface"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Location"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessObject"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessProcess"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessFunction"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessInteraction"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessEvent"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/BusinessService"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Representation"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Meaning"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Value"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Product"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Contract"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/ApplicationComponent"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/ApplicationCollaboration"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/ApplicationInterface"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/DataObject"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/ApplicationFunction"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/ApplicationInteraction"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/ApplicationService"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Node"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Device"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/SystemSoftware"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/InfrastructureInterface"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Network"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/CommunicationPath"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/InfrastructureFunction"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/InfrastructureService"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Artifact"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Stakeholder"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Driver"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Assessment"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Goal"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Requirement"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Constraint"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Principle"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/WorkPackage"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Deliverable"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Plateau"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//ElementTypeName/Gap"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iArchimate.ecore#//RelationTypeName">
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/NotSelected"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Composition"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Aggregation"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Assignment"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Realization"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/UsedBy"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Access"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Association"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Triggering"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Flow"/>
+      <genEnumLiterals ecoreEnumLiteral="iArchimate.ecore#//RelationTypeName/Specialization"/>
+    </genEnums>
+    <genClasses ecoreClass="iArchimate.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Model/relations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Model/decisionTraces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Model/components"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="iArchimate.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Component/components"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Group"/>
+    <genClasses ecoreClass="iArchimate.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Element/typeName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Element/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Element/relations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Element/elementDecisionTrace"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//AbsentElement"/>
+    <genClasses ecoreClass="iArchimate.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Attribute/value"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//ImperfectAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//ImperfectAttribute/imperfectionType"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Relation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Relation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Relation/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Relation/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Relation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Relation/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//ImperfectRelation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//ImperfectRelation/imperfectionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//ImperfectRelation/certaintyDegree"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//DecisionTrace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//DecisionTrace/idDecisionTrace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//DecisionTrace/decisions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//DecisionTrace/facts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//DecisionTrace/observations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iArchimate.ecore#//DecisionTrace/sources"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="iArchimate.ecore#//Source">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Source/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Source/reliability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Source/certaintyDegree"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Source/sourceObservations"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//DirectObservation"/>
+    <genClasses ecoreClass="iArchimate.ecore#//Meeting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Meeting/minuteNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Meeting/meetingParticipants"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Document">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Document/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Document/description"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Person/organizationalUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Person/rol"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Observation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Observation/idObservation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Observation/referenceDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Observation/observationFacts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Observation/belongsTo"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Fact">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Fact/isFactOf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Fact/idFact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Fact/element"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//InstanceFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//InstanceFact/exist"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//AttributeFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//AttributeFact/attName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//AttributeFact/attValue"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//RelationFact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//RelationFact/relName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//RelationFact/relValue"/>
+    </genClasses>
+    <genClasses ecoreClass="iArchimate.ecore#//Decision">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Decision/idDecision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iArchimate.ecore#//Decision/result"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iArchimate.ecore#//Decision/decisionFacts"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

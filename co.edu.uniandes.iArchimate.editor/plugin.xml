@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated iArchimate -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="iArchimate.presentation.IArchimateModelWizardID"
+            name="%_UI_IArchimateModelWizard_label"
+            class="iArchimate.presentation.IArchimateModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IArchimateModelFile.gif">
+         <description>%_UI_IArchimateModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated iArchimate -->
+      <editor
+            id="iArchimate.presentation.IArchimateEditorID"
+            name="%_UI_IArchimateEditor_label"
+            icon="icons/full/obj16/IArchimateModelFile.gif"
+            extensions="iarchimate"
+            class="iArchimate.presentation.IArchimateEditor"
+            contributorClass="iArchimate.presentation.IArchimateActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

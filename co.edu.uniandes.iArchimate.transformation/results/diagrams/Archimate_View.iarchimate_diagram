@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0" type="IArchimate" measurementUnit="Pixel">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_1000" />
+  <element xmi:type="co.edu.uniandes.iArchimate:Model" href="../models/Application_Cooperation_View.iarchimate#/" />
+</notation:Diagram>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Archisurance" typeName="BusinessActor">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="HRM" typeName="BusinessActor"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Product Development" typeName="BusinessActor"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Front Office" typeName="BusinessActor">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Intermediary Relations" typeName="BusinessActor"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer Relations" typeName="BusinessActor"/>
+    </components>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Finance" typeName="BusinessActor"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Document Processing SSC" typeName="BusinessActor"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Back Office" typeName="BusinessActor">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Home  &amp;  Away" typeName="BusinessActor"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Car" typeName="BusinessActor"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Legal Aid" typeName="BusinessActor"/>
+    </components>
+  </components>
+</co.edu.uniandes.iArchimate:Model>

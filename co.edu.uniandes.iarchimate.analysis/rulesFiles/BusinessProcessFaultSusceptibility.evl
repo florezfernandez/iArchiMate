@@ -1,0 +1,37 @@
+context Element {
+	critique hasAttributeAvailabilityInApplicationComponent{
+		check{
+			var validationError=0;
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.Util');			
+			if(self.typeName.name == 'ApplicationComponent' or self.typeName.name == 'ApplicationService'){
+				for(att : Attribute in self.attributes){
+					if(att.name == 'availability'){
+						if(att.type.name == 'EDouble'){
+							var attValue = rvh.castDouble(att.value);
+							if(attValue >= 0 and attValue <= 1){
+								return true;
+							}else{
+								validationError=2;
+								return false;
+							}							
+						}else{
+							validationError=1;
+							return false;
+						}
+					}
+				}
+				return false;
+			}
+			return true; 
+		}	
+		message{
+			if(validationError==0){
+				return "The attribute 'availability' in the Application Element " + self.name + " is required";
+			}else if(validationError==1){
+				return "The attribute 'availability' in the Application Element " + self.name + " must be EDouble";			
+			}else if(validationError==2){
+				return "The attribute 'availability' in the Application Element " + self.name + " must be between 0 and 1";			
+			}
+	    }  	
+	}
+}

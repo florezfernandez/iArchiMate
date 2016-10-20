@@ -1,0 +1,19 @@
+----------Palette----------
+var palette := GmfTool!Palette.all.first();
+
+var toolGroupImperfection = new GmfTool!ToolGroup;
+toolGroupImperfection.title := 'Components of Imperfection';
+toolGroupImperfection.collapsible := true;
+palette.tools.add(toolGroupImperfection);
+
+var toolGroupObjects = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Objects');
+var toolGroupConnections = GmfTool!ToolGroup.all.selectOne(r|r.title = 'Connections');
+
+var toolEntry; 
+
+toolEntry = toolGroupObjects.tools.selectOne(r|r.title = 'AbsentElement');
+toolGroupImperfection.tools.add(toolEntry);
+
+toolEntry = toolGroupConnections.tools.selectOne(r|r.title = 'ImperfectRelation');
+toolGroupImperfection.tools.add(toolEntry);
+----------Palette----------

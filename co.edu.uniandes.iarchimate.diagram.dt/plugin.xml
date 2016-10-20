@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="iarchimatedt_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="iarchimatedt_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="iArchimate.diagram.dt.part.IArchimateDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/IArchimateDiagramFile.gif"
+         extensions="iarchimatedt_diagram"
+         default="true"
+         class="iArchimate.diagram.dt.part.IArchimateDiagramEditor"
+         matchingStrategy="iArchimate.diagram.dt.part.IArchimateMatchingStrategy"
+         contributorClass="iArchimate.diagram.dt.part.IArchimateDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="iArchimate.diagram.dt.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/IArchimateDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="iArchimate.diagram.dt.part.IArchimateCreationWizard"
+  	     id="iArchimate.diagram.dt.part.IArchimateCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="co.edu.uniandes.iArchimate.diagram.dt.InitDiagram"
+            nameFilter="*.iarchimatedt"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="iArchimate.diagram.dt.part.IArchimateInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="co.edu.uniandes.iArchimate.diagram.dt.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="IArchimateDTPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="iArchimate.diagram.dt.part.IArchimateDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="IArchimateDTPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="iArchimate.diagram.dt.part.IArchimateDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="IArchimateDTRender">
+         <Priority name="Lowest"/>
+         <ViewId id="iArchimate.diagram.dt.part.IArchimateDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="iArchimate.diagram.dt.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="co.edu.uniandes.iArchimate.diagram.general"
+            name="%prefpage.co.edu.uniandes.iArchimate.diagram.general"
+            class="iArchimate.diagram.dt.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="co.edu.uniandes.iArchimate.diagram.appearance"
+            name="%prefpage.co.edu.uniandes.iArchimate.diagram.appearance"
+            category="co.edu.uniandes.iArchimate.diagram.general"
+            class="iArchimate.diagram.dt.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="co.edu.uniandes.iArchimate.diagram.connections"
+            name="%prefpage.co.edu.uniandes.iArchimate.diagram.connections"
+            category="co.edu.uniandes.iArchimate.diagram.general"
+            class="iArchimate.diagram.dt.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="co.edu.uniandes.iArchimate.diagram.printing"
+            name="%prefpage.co.edu.uniandes.iArchimate.diagram.printing"
+            category="co.edu.uniandes.iArchimate.diagram.general"
+            class="iArchimate.diagram.dt.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="co.edu.uniandes.iArchimate.diagram.rulersAndGrid"
+            name="%prefpage.co.edu.uniandes.iArchimate.diagram.rulersAndGrid"
+            category="co.edu.uniandes.iArchimate.diagram.general"
+            class="iArchimate.diagram.dt.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="co.edu.uniandes.iArchimate.diagram.dt"
+            labelProvider="iArchimate.diagram.dt.sheet.IArchimateSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="co.edu.uniandes.iArchimate.diagram.dt">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="co.edu.uniandes.iArchimate.diagram.dt">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="iArchimate.diagram.dt.sheet.IArchimatePropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="iArchimate.diagram.dt.navigator.IArchimateAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="iArchimate.diagram.dt.providers.IArchimateViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="IArchimateDT"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,2009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4005,4002,4006,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="iArchimate.diagram.dt.providers.IArchimateEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="IArchimateDT"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4005,4002,4006,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="iArchimate.diagram.dt.providers.IArchimateModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="iArchimate.diagram.dt.edit.parts.DecisionTraceEditPart" id="DecisionTrace_1000"/>
+         <object class="iArchimate.diagram.dt.edit.parts.AttributeFactEditPart" id="AttributeFact_2001"/>
+         <object class="iArchimate.diagram.dt.edit.parts.InstanceFactEditPart" id="InstanceFact_2002"/>
+         <object class="iArchimate.diagram.dt.edit.parts.DecisionEditPart" id="Decision_2003"/>
+         <object class="iArchimate.diagram.dt.edit.parts.MeetingEditPart" id="Meeting_2004"/>
+         <object class="iArchimate.diagram.dt.edit.parts.RelationFactEditPart" id="RelationFact_2005"/>
+         <object class="iArchimate.diagram.dt.edit.parts.ObservationEditPart" id="Observation_2006"/>
+         <object class="iArchimate.diagram.dt.edit.parts.DirectObservationEditPart" id="DirectObservation_2007"/>
+         <object class="iArchimate.diagram.dt.edit.parts.PersonEditPart" id="Person_2008"/>
+         <object class="iArchimate.diagram.dt.edit.parts.DocumentEditPart" id="Document_2009"/>
+         <context elements="DecisionTrace_1000,AttributeFact_2001,InstanceFact_2002,Decision_2003,Meeting_2004,RelationFact_2005,Observation_2006,DirectObservation_2007,Person_2008,Document_2009,"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="iArchimate.diagram.dt.providers.IArchimateIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="iArchimate.diagram.dt.providers.IArchimateParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.DecisionTrace_1000"
+               name="%metatype.name.DecisionTrace_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DecisionTrace"
+               edithelper="iArchimate.diagram.dt.edit.helpers.DecisionTraceEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.AttributeFact_2001"
+               name="%metatype.name.AttributeFact_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AttributeFact"
+               edithelper="iArchimate.diagram.dt.edit.helpers.AttributeFactEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.InstanceFact_2002"
+               name="%metatype.name.InstanceFact_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="InstanceFact"
+               edithelper="iArchimate.diagram.dt.edit.helpers.InstanceFactEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.Decision_2003"
+               name="%metatype.name.Decision_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Decision"
+               edithelper="iArchimate.diagram.dt.edit.helpers.DecisionEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.Meeting_2004"
+               name="%metatype.name.Meeting_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Meeting"
+               edithelper="iArchimate.diagram.dt.edit.helpers.MeetingEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.RelationFact_2005"
+               name="%metatype.name.RelationFact_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RelationFact"
+               edithelper="iArchimate.diagram.dt.edit.helpers.RelationFactEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.Observation_2006"
+               name="%metatype.name.Observation_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Observation"
+               edithelper="iArchimate.diagram.dt.edit.helpers.ObservationEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.DirectObservation_2007"
+               name="%metatype.name.DirectObservation_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DirectObservation"
+               edithelper="iArchimate.diagram.dt.edit.helpers.DirectObservationEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.Person_2008"
+               name="%metatype.name.Person_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Person"
+               edithelper="iArchimate.diagram.dt.edit.helpers.PersonEditHelper">
+            <param name="semanticHint" value="2008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <metamodelType
+               id="co.edu.uniandes.iArchimate.diagram.dt.Document_2009"
+               name="%metatype.name.Document_2009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Document"
+               edithelper="iArchimate.diagram.dt.edit.helpers.DocumentEditHelper">
+            <param name="semanticHint" value="2009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <specializationType
+               id="co.edu.uniandes.iArchimate.diagram.dt.SourceSourceObservations_4005"
+               name="%metatype.name.SourceSourceObservations_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <specializationType
+               id="co.edu.uniandes.iArchimate.diagram.dt.MeetingMeetingParticipants_4002"
+               name="%metatype.name.MeetingMeetingParticipants_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <specializationType
+               id="co.edu.uniandes.iArchimate.diagram.dt.ObservationObservationFacts_4006"
+               name="%metatype.name.ObservationObservationFacts_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://co/edu/uniandes/iArchimate">
+         <specializationType
+               id="co.edu.uniandes.iArchimate.diagram.dt.DecisionDecisionFacts_4003"
+               name="%metatype.name.DecisionDecisionFacts_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="co.edu.uniandes.iArchimate.diagram.dt.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="co.edu.uniandes.iArchimate.diagram.dt.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="co.edu.uniandes.iArchimate.diagram.dt.TypeContext">
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.DecisionTrace_1000"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.AttributeFact_2001"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.InstanceFact_2002"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.Decision_2003"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.Meeting_2004"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.RelationFact_2005"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.Observation_2006"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.DirectObservation_2007"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.Person_2008"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.Document_2009"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.SourceSourceObservations_4005"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.MeetingMeetingParticipants_4002"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.ObservationObservationFacts_4006"/>
+         <elementType ref="co.edu.uniandes.iArchimate.diagram.dt.DecisionDecisionFacts_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="co.edu.uniandes.iArchimate.diagram.dt.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="co.edu.uniandes.iArchimate.diagram.dt"
+           properties="isURIEditorInput"
+           class="iArchimate.diagram.dt.part.IArchimateUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="co.edu.uniandes.iArchimate.diagram.dt.resourceContent"/>
+			<contentExtension pattern="co.edu.uniandes.iArchimate.diagram.dt.domainResourceContent"/>
+            <contentExtension pattern="co.edu.uniandes.iArchimate.diagram.dt.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="co.edu.uniandes.iArchimate.diagram.dt.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="co.edu.uniandes.iArchimate.diagram.dt.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="iArchimate.diagram.dt.navigator.IArchimateNavigatorContentProvider" 
+            labelProvider="iArchimate.diagram.dt.navigator.IArchimateNavigatorLabelProvider"
+            icon="icons/obj16/IArchimateDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="iarchimatedt_diagram"/>
+               </and>
+               <instanceof value="iArchimate.diagram.dt.navigator.IArchimateAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="iArchimate.diagram.dt.navigator.IArchimateAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="co.edu.uniandes.iArchimate.diagram.dt.navigatorSorter" 
+               class="iArchimate.diagram.dt.navigator.IArchimateNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="iarchimatedt_diagram"/>
+                  </and>
+                  <instanceof value="iArchimate.diagram.dt.navigator.IArchimateAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="co.edu.uniandes.iArchimate.diagram.dt.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="iArchimate.diagram.dt.navigator.IArchimateDomainNavigatorContentProvider" 
+            labelProvider="iArchimate.diagram.dt.navigator.IArchimateDomainNavigatorLabelProvider"
+            icon="icons/obj16/IArchimateDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="iarchimatedt"/>
+               </and>
+               <instanceof value="iArchimate.diagram.dt.navigator.IArchimateDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="iArchimate.diagram.dt.navigator.IArchimateDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="co.edu.uniandes.iArchimate.diagram.dt.navigatorActionProvider"
+            class="iArchimate.diagram.dt.navigator.IArchimateNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="iArchimate.diagram.dt.navigator.IArchimateAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="co.edu.uniandes.iArchimate.diagram.dt.navigatorLinkHelper"
+            class="iArchimate.diagram.dt.navigator.IArchimateNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="co.edu.uniandes.iArchimate.diagram.dt.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="iArchimate.diagram.dt.navigator.IArchimateAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="iArchimate.diagram.dt.part.IArchimateDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="iArchimate.diagram.dt.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="iArchimate.diagram.dt.updateDiagram"
+         contextId="iArchimate.diagram.dt.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="co.edu.uniandes.iArchimate.diagram.dt.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="iArchimate.diagram.dt.part.IArchimateDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="iArchimate.diagram.dt.edit.parts.DecisionTraceEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="iArchimate.diagram.dt.part.IArchimateDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="co.edu.uniandes.iArchimate.diagram.dt.LoadResourceAction"
+         name="Load Resource"
+         categoryId="iArchimate.diagram.dt.part.IArchimateDiagramEditorID"
+         defaultHandler="iArchimate.diagram.dt.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

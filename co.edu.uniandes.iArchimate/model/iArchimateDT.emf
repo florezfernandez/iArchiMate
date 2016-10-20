@@ -1,0 +1,173 @@
+@gmf(foo="bar")
+@namespace(uri="http://co/edu/uniandes/iArchimateDT", prefix="co.edu.uniandes.iArchimateDT")
+package iArchimateDT;
+
+@gmf.diagram(model.extension="iarchimatedt", diagram.extension="iarchimatedt_diagram")
+class DecisionTrace {
+  attr String[1] idDecisionTrace;
+  val Decision[*] decisions;
+  val Fact[*] facts;
+  val Observation[*] observations;
+  val Source[*] sources;
+}
+
+abstract class Source {
+  attr String[1] name;
+  attr double reliability;
+  attr double certaintyDegree;
+
+  @gmf.link(target.decoration="arrow", source.decoration="none", style="dash", color="0,0,0")
+  ref Observation[*]#belongsTo sourceObservations;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/directObservation.svg", label.icon="false", label="name", label.pattern="{0}", size="60,60")
+class DirectObservation extends Source {
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/meeting.svg", label.icon="false", label="name", label.pattern="{0}", size="60,60")
+class Meeting extends Source {
+  attr int minuteNumber;
+
+  @gmf.link(target.decoration="arrow", source.decoration="none", style="dash", color="0,0,0")
+  ref Person[2..*] meetingParticipants;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/document.svg", label.icon="false", label="name", label.pattern="{0}", size="60,60")
+class Document extends Source {
+  attr double version;
+  attr String description;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/person.svg", label.icon="false", label="name", label.pattern="{0}", border.style="dash", size="60,60")
+class Person extends Source {
+  attr String organizationalUnit;
+  attr String rol;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/observation.svg", label.icon="false", label="idObservation", label.pattern="{0}", size="60,60")
+class Observation {
+  attr String[1] idObservation;
+  attr EDate referenceDate;
+
+  @gmf.link(target.decoration="arrow", source.decoration="none", style="dash", color="0,0,0")
+  ref Fact[*]#isFactOf observationFacts;
+  ref Source[1]#sourceObservations belongsTo;
+}
+
+class Fact {
+  ref Observation[+]#observationFacts isFactOf;
+  attr String[1] idFact;
+  attr String[1] element;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/instanceFact.svg", label.icon="false", label="idFact", label.pattern="{0}", size="60,60")
+class InstanceFact extends Fact {
+  attr boolean[1] exist;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/attributeFact.svg", label.icon="false", label="idFact", label.pattern="{0}", size="60,60")
+class AttributeFact extends Fact {
+  attr String[1] attName;
+  attr String[+] attValue;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/relationFact.svg", label.icon="false", label="idFact", label.pattern="{0}", size="60,60")
+class RelationFact extends Fact {
+  attr String[1] relName;
+  attr String[+] relValue;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/co.edu.uniandes.iArchimate/icons/decision.svg", label.icon="false", label="idDecision", label.pattern="{0}", size="60,60")
+class Decision {
+  attr String[1] idDecision;
+  attr String[+] result;
+
+  @gmf.link(target.decoration="arrow", source.decoration="none", style="dash", color="0,0,0")
+  ref Fact[+] decisionFacts;
+}
+
+enum AttributeTypeValue {
+  EInt = 0;
+  EDouble = 1;
+  EString = 2;
+  EBoolean = 3;
+  EDate = 4;
+}
+
+enum ImperfectAttributeTypeValue {
+  NumericRange = 0;
+  NumericSet = 1;
+  StringSet = 2;
+  NumericValueCertaintyDegree = 3;
+  StringValueCertaintyDegree = 4;
+  LinguisticValue = 5;
+  NoValue = 6;
+}
+
+enum ImperfectRelationType {
+  InstanceCertaintyDegree = 0;
+  InstanceSet = 1;
+  AbsentInstance = 2;
+}
+
+enum ElementTypeName {
+  NotSelected = 100;
+  BusinessActor = 0;
+  BusinessRole = 1;
+  BusinessCollaboration = 2;
+  BusinessInterface = 3;
+  Location = 4;
+  BusinessObject = 5;
+  BusinessProcess = 6;
+  BusinessFunction = 7;
+  BusinessInteraction = 8;
+  BusinessEvent = 9;
+  BusinessService = 10;
+  Representation = 11;
+  Meaning = 12;
+  Value = 13;
+  Product = 14;
+  Contract = 15;
+  ApplicationComponent = 16;
+  ApplicationCollaboration = 17;
+  ApplicationInterface = 18;
+  DataObject = 19;
+  ApplicationFunction = 20;
+  ApplicationInteraction = 21;
+  ApplicationService = 22;
+  Node = 23;
+  Device = 24;
+  SystemSoftware = 25;
+  InfrastructureInterface = 26;
+  Network = 27;
+  CommunicationPath = 28;
+  InfrastructureFunction = 29;
+  InfrastructureService = 30;
+  Artifact = 31;
+  Stakeholder = 32;
+  Driver = 33;
+  Assessment = 34;
+  Goal = 35;
+  Requirement = 36;
+  Constraint = 37;
+  Principle = 38;
+  WorkPackage = 39;
+  Deliverable = 40;
+  Plateau = 41;
+  Gap = 42;
+}
+
+enum RelationTypeName {
+  NotSelected = 0;
+  Composition = 1;
+  Aggregation = 2;
+  Assignment = 3;
+  Realization = 4;
+  UsedBy = 5;
+  Access = 6;
+  Association = 7;
+  Triggering = 8;
+  Flow = 9;
+  Specialization = 10;
+}
+

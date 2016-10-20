@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.0" target="//@components.12" typeName="Realisation"/>
+  <relations source="//@components.0" target="//@components.2" typeName="Realisation"/>
+  <relations source="//@components.0" target="//@components.13" typeName="Realisation"/>
+  <relations source="//@components.0" target="//@components.8" typeName="Realisation"/>
+  <relations source="//@components.0" target="//@components.4" typeName="Realisation"/>
+  <relations source="//@components.1" target="//@components.3" typeName="Realisation"/>
+  <relations source="//@components.2" target="//@components.5" typeName="Specialisation"/>
+  <relations source="//@components.4" target="//@components.5" typeName="Specialisation"/>
+  <relations source="//@components.5" target="//@components.11" typeName="Aggregation"/>
+  <relations source="//@components.5" target="//@components.3" typeName="Aggregation"/>
+  <relations source="//@components.6" target="//@components.11" typeName="Realisation"/>
+  <relations source="//@components.7" target="//@components.10" typeName="Aggregation"/>
+  <relations source="//@components.8" target="//@components.5" typeName="Specialisation"/>
+  <relations source="//@components.9" target="//@components.10" typeName="Realisation"/>
+  <relations source="//@components.10" target="//@components.3" typeName="Composition"/>
+  <relations source="//@components.10" target="//@components.5" typeName="Composition"/>
+  <relations source="//@components.10" target="//@components.11" typeName="Composition"/>
+  <relations source="//@components.12" target="//@components.5" typeName="Specialisation"/>
+  <relations source="//@components.13" target="//@components.5" typeName="Specialisation"/>
+  <relations source="//@components.14" target="//@components.11" typeName="Realisation"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Policy Data" typeName="DataObject" relations="//@relations.0 //@relations.1 //@relations.2 //@relations.3 //@relations.4"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Request Data" typeName="DataObject" relations="//@relations.5"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Legal aid  Insurance Policy" typeName="BusinessObject" relations="//@relations.6"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Request" typeName="BusinessObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Liability  Insurance Policy" typeName="BusinessObject" relations="//@relations.7"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Policy" typeName="BusinessObject" relations="//@relations.8 //@relations.9"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claim Form" typeName="Representation" relations="//@relations.10"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer" typeName="BusinessObject" relations="//@relations.11"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Travel  Insurance Policy" typeName="BusinessObject" relations="//@relations.12"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer File Data" typeName="DataObject" relations="//@relations.13"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer File" typeName="BusinessObject" relations="//@relations.14 //@relations.15 //@relations.16"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Damage Claim" typeName="BusinessObject"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Car Insurance Policy" typeName="BusinessObject" relations="//@relations.17"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Home Insurance Policy" typeName="BusinessObject" relations="//@relations.18"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Damage Claim Data" typeName="DataObject" relations="//@relations.19"/>
+</co.edu.uniandes.iArchimate:Model>

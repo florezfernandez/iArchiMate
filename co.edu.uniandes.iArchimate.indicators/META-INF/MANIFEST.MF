@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Indicators
+Bundle-SymbolicName: co.edu.uniandes.iArchimate.indicators
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.emf.common;bundle-version="2.8.0",
+ org.eclipse.emf.ecore;bundle-version="2.8.3",
+ co.edu.uniandes.iArchimate.utilities;bundle-version="1.0.0",
+ co.edu.uniandes.iArchimate;bundle-version="1.0.0"
+Export-Package: co.edu.uniandes.iArchimate.indicators,
+ co.edu.uniandes.iArchimate.indicators.business,
+ co.edu.uniandes.iArchimate.indicators.imperfection
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

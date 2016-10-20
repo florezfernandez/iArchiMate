@@ -1,0 +1,73 @@
+context ImperfectRelation{
+	constraint isInstanceCertaintyDegree {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectRelationRulesValidationHelper');
+			var problemId;
+			if(self.imperfectionType.name = 'InstanceCertaintyDegree'){
+				problemId = rvh.isInstanceCertaintyDegree(self); 
+				if(problemId = 0){
+					return true;
+				}else{
+					return false;
+				}			
+			}else{
+				return true;
+			}
+		}
+		message{
+			if(problemId = 1){
+			 	return self.eClass().name + ' with imperfect type "InstanceCertaintyDegree" requires certainty degree';
+			 }else if(problemId = 2){
+			 	return self.eClass().name + ' with imperfect type "InstanceCertaintyDegree" cannot have an AbsentElement as target';			 
+			 }
+		}
+	}
+
+	constraint isInstanceSet {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectRelationRulesValidationHelper');
+			var problemId;
+			if(self.imperfectionType.name = 'InstanceSet'){
+				problemId = rvh.isInstanceSet(self);
+				if(problemId = 0){
+					return true;
+				}else{
+					return false;
+				}			
+			}else{
+				return true;
+			} 			
+		}
+		message{
+			if(problemId = 1){
+			 	return self.eClass().name + ' with imperfect type "InstanceSet" does not require certainty degree';
+			 }else if(problemId = 2){
+			 	return self.eClass().name + ' with imperfect type "InstanceSet" cannot have an AbsentElement as target';			 
+			 }
+		}
+	}
+
+	constraint isAbsentInstance {
+		check{
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.ImperfectRelationRulesValidationHelper');
+			var problemId;
+			if(self.imperfectionType.name = 'AbsentInstance'){
+				problemId = rvh.isAbsentInstance(self);
+				if(problemId = 0){
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				return true;
+			}
+		}
+		message{
+			if(problemId = 1){
+			 	return self.eClass().name + ' with imperfect type "AbsentInstance" must have an AbsentElement as target';
+			 }else if(problemId = 2){
+			 	return self.eClass().name + ' with imperfect type "AbsentInstance" does not require certainty degree';			 
+			 }
+		}
+	}
+}

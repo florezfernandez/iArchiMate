@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.0/@components.1" target="//@components.0/@components.2" typeName="Association"/>
+  <relations source="//@components.0/@components.2" target="//@components.0/@components.0" typeName="Association"/>
+  <relations source="//@components.1/@components.0" target="//@components.1/@components.4" typeName="Association"/>
+  <relations source="//@components.1/@components.1" target="//@components.4" typeName="Realization"/>
+  <relations source="//@components.1/@components.1" target="//@components.1/@components.0" typeName="Association"/>
+  <relations source="//@components.1/@components.2" target="//@components.2" typeName="Realization"/>
+  <relations source="//@components.1/@components.4" target="//@components.3" typeName="Realization"/>
+  <relations source="//@components.1/@components.4" target="//@components.5" typeName="Association"/>
+  <relations source="//@components.5" target="//@components.0/@components.1" typeName="Association"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Intermediary">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Admin Server" typeName="Device"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Firewall" typeName="Node" relations="//@relations.0"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="LAN" typeName="Network" relations="//@relations.1"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Archisurance">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="LAN" typeName="Network" relations="//@relations.2"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Mainframe" typeName="Node" relations="//@relations.3 //@relations.4">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Message Queing" typeName="SystemSoftware"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="CICS" typeName="SystemSoftware"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="DBMS" typeName="SystemSoftware"/>
+    </components>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="NAS File Server" typeName="Device" relations="//@relations.5"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Unix Server Farm" typeName="Node">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Unix Server" typeName="Device"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Unix Server" typeName="Device"/>
+    </components>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Firewall" typeName="Node" relations="//@relations.6 //@relations.7"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="File Service" typeName="InfrastructureService"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Network Service" typeName="InfrastructureService"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Database Service" typeName="InfrastructureService"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="BIBIT" typeName="Network" relations="//@relations.8"/>
+</co.edu.uniandes.iArchimate:Model>

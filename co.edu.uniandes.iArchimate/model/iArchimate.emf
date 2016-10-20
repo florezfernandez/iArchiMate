@@ -1,0 +1,213 @@
+@gmf(foo="bar")
+@namespace(uri="http://co/edu/uniandes/iArchimate", prefix="co.edu.uniandes.iArchimate")
+package iArchimate;
+
+@gmf.diagram(model.extension="iarchimate", diagram.extension="iarchimate_diagram")
+class Model {
+  val Relation[*] relations;
+  val DecisionTrace[*] decisionTraces;
+  val Component[*] components;
+}
+
+abstract class Component {
+  attr String[1] name;
+
+  @gmf.compartment(layout="free")
+  val Component[*] components;
+}
+
+@gmf.node(figure="rounded", label.icon="true", label="name", label.pattern="{0}", size="600,200")
+class Group extends Component {
+}
+
+@gmf.node(figure="rounded", label.icon="true", label="name", label.pattern="{0}", size="140,60", border.color="0,0,0")
+class Element extends Component {
+  attr ElementTypeName[1] typeName;
+  val Attribute[*] attributes;
+  ref Relation[*]#source relations;
+
+  @gmf.link(target.decoration="arrow", source.decoration="filledsquare", style="dash", color="0,0,255")
+  ref DecisionTrace elementDecisionTrace;
+}
+
+@gmf.node(figure="rectangle", label.icon="true", label="name", label.pattern="{0}", size="140,60", border.color="0,0,255")
+class AbsentElement extends Element {
+}
+
+class Attribute {
+  attr String[1] name = "";
+  attr AttributeTypeValue[1] type;
+  attr String[1] value;
+}
+
+class ImperfectAttribute extends Attribute {
+  attr ImperfectAttributeTypeValue[1] imperfectionType;
+}
+
+@gmf.link(source="source", target="target", label="name", label.pattern="{0}", color="0,0,0")
+class Relation {
+  ref Element[1]#relations source;
+  ref Element[1] target;
+  attr RelationTypeName[1] typeName;
+  attr String name;
+  val Attribute[*] attributes;
+}
+
+@gmf.link(source="source", target="target", label="name", target.decoration="arrow", label.pattern="{0}", source.decoration="none", color="0,0,255")
+class ImperfectRelation extends Relation {
+  attr ImperfectRelationType[1] imperfectionType;
+  attr double certaintyDegree;
+}
+
+@gmf.node(figure="rounded", label.icon="true", label="idDecisionTrace", label.pattern="{0}", size="100,60")
+class DecisionTrace {
+  attr String[1] idDecisionTrace;
+  val Decision[*] decisions;
+  val Fact[*] facts;
+  val Observation[*] observations;
+  val Source[*] sources;
+}
+
+abstract class Source {
+  attr String[1] name;
+  attr double reliability;
+  attr double certaintyDegree;
+  ref Observation[*]#belongsTo sourceObservations;
+}
+
+class DirectObservation extends Source {
+}
+
+class Meeting extends Source {
+  attr int minuteNumber;
+  ref Person[2..*] meetingParticipants;
+}
+
+class Document extends Source {
+  attr double version;
+  attr String description;
+}
+
+class Person extends Source {
+  attr String organizationalUnit;
+  attr String rol;
+}
+
+class Observation {
+  attr String[1] idObservation;
+  attr EDate referenceDate;
+  ref Fact[*]#isFactOf observationFacts;
+  ref Source[1]#sourceObservations belongsTo;
+}
+
+class Fact {
+  ref Observation[+]#observationFacts isFactOf;
+  attr String[1] idFact;
+  attr String[1] element;
+}
+
+class InstanceFact extends Fact {
+  attr boolean[1] exist;
+}
+
+class AttributeFact extends Fact {
+  attr String[1] attName;
+  attr String[+] attValue;
+}
+
+class RelationFact extends Fact {
+  attr String[1] relName;
+  attr String[+] relValue;
+}
+
+class Decision {
+  attr String[1] idDecision;
+  attr String[+] result;
+  ref Fact[+] decisionFacts;
+}
+
+enum AttributeTypeValue {
+  EInt = 0;
+  EDouble = 1;
+  EString = 2;
+  EBoolean = 3;
+  EDate = 4;
+}
+
+enum ImperfectAttributeTypeValue {
+  NumericRange = 0;
+  NumericSet = 1;
+  StringSet = 2;
+  NumericValueCertaintyDegree = 3;
+  StringValueCertaintyDegree = 4;
+  LinguisticValue = 5;
+  NoValue = 6;
+}
+
+enum ImperfectRelationType {
+  InstanceCertaintyDegree = 0;
+  InstanceSet = 1;
+  AbsentInstance = 2;
+}
+
+enum ElementTypeName {
+  NotSelected = 100;
+  BusinessActor = 0;
+  BusinessRole = 1;
+  BusinessCollaboration = 2;
+  BusinessInterface = 3;
+  Location = 4;
+  BusinessObject = 5;
+  BusinessProcess = 6;
+  BusinessFunction = 7;
+  BusinessInteraction = 8;
+  BusinessEvent = 9;
+  BusinessService = 10;
+  Representation = 11;
+  Meaning = 12;
+  Value = 13;
+  Product = 14;
+  Contract = 15;
+  ApplicationComponent = 16;
+  ApplicationCollaboration = 17;
+  ApplicationInterface = 18;
+  DataObject = 19;
+  ApplicationFunction = 20;
+  ApplicationInteraction = 21;
+  ApplicationService = 22;
+  Node = 23;
+  Device = 24;
+  SystemSoftware = 25;
+  InfrastructureInterface = 26;
+  Network = 27;
+  CommunicationPath = 28;
+  InfrastructureFunction = 29;
+  InfrastructureService = 30;
+  Artifact = 31;
+  Stakeholder = 32;
+  Driver = 33;
+  Assessment = 34;
+  Goal = 35;
+  Requirement = 36;
+  Constraint = 37;
+  Principle = 38;
+  WorkPackage = 39;
+  Deliverable = 40;
+  Plateau = 41;
+  Gap = 42;
+}
+
+enum RelationTypeName {
+  NotSelected = 0;
+  Composition = 1;
+  Aggregation = 2;
+  Assignment = 3;
+  Realization = 4;
+  UsedBy = 5;
+  Access = 6;
+  Association = 7;
+  Triggering = 8;
+  Flow = 9;
+  Specialization = 10;
+}
+

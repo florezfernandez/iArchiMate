@@ -1,0 +1,97 @@
+context Element {
+	critique hasAttributeConditionAttributeInRequirement{
+		check{
+			var validationError=0;
+			if(self.typeName.name == 'Requirement'){
+				for(att : Attribute in self.attributes){
+					if(att.name == 'conditionAttribute'){
+						if(att.type.name == 'EString'){
+							return true;
+						}else{
+							validationError=1;
+							return false;
+						}
+					}
+				}
+				return false;
+			}
+			return true; 
+		}	
+		message{
+			if(validationError==0){
+				return "The attribute 'conditionAttribute' in Requirement is required";
+			}else if(validationError==1){
+				return "The attribute 'conditionAttribute' in Requirement must be EString";			
+			}
+	    }  	
+	}
+	critique hasAttributeConditionAttributeInRequirement{
+		check{
+			var validationError=0;
+			if(self.typeName.name == 'Requirement'){
+				for(att : Attribute in self.attributes){
+					if(att.name == 'conditionOperation'){
+						if(att.type.name == 'EString'){
+							if(att.value == 'lessThan' or att.value == 'equals' or att.value == 'greaterThan'){
+								return true;
+							}else{
+								validationError=2;
+								return false;
+							}
+						}else{
+							validationError=1;
+							return false;
+						}
+					}
+				}
+				return false;
+			}
+			return true; 
+		}	
+		message{
+			if(validationError==0){
+				return "The attribute 'conditionOperation' in Requirement is required";
+			}else if(validationError==1){
+				return "The attribute 'conditionOperation' in Requirement must be EString";			
+			}else if(validationError==2){
+				return "The attribute 'conditionOperation' in Requirement must be 'lessThan', 'equals', or 'greaterThan'";			
+			}
+	    }  	
+	}
+	critique hasAttributeConditionValueInRequirement{
+		check{
+			var validationError=0;
+			var rvh = new Native('co.edu.uniandes.iArchimate.validation.Util');			
+			if(self.typeName.name == 'Requirement'){
+				for(att : Attribute in self.attributes){
+					if(att.name == 'conditionValue'){
+						if(att.type.name == 'EDouble'){
+							var attValue = rvh.castDouble(att.value);
+							if(attValue >= 0 and attValue <= 1){
+								return true;
+							}else{
+								validationError=2;
+								return false;
+							}							
+						}else{
+							validationError=1;
+							return false;
+						}
+					}
+				}
+				return false;
+			}
+			return true; 
+		}	
+		message{
+			if(validationError==0){
+				return "The attribute 'conditionValue' in Requirement is required";
+			}else if(validationError==1){
+				return "The attribute 'conditionValue' in Requirement must be EDouble";			
+			}else if(validationError==2){
+				return "The attribute 'conditionValue' in Requirement must be between 0 and 1";			
+			}
+	    }  	
+	}
+
+}

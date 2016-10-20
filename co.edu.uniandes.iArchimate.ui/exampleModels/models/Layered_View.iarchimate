@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.0/@components.0" target="//@components.5/@components.1/@components.2" typeName="UsedBy"/>
+  <relations source="//@components.0/@components.1" target="//@components.5/@components.1/@components.2" typeName="UsedBy"/>
+  <relations source="//@components.0/@components.2" target="//@components.5/@components.1/@components.1" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.0" target="//@components.4/@components.2" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.0" target="//@components.4/@components.3" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.1" target="//@components.4/@components.3" typeName="UsedBy"/>
+  <relations source="//@components.1/@components.1" target="//@components.4/@components.1" typeName="UsedBy"/>
+  <relations source="//@components.2/@components.0" target="//@components.6/@components.0" typeName="UsedBy"/>
+  <relations source="//@components.2/@components.1" target="//@components.6/@components.0" typeName="UsedBy"/>
+  <relations source="//@components.2/@components.2" target="//@components.6/@components.0" typeName="UsedBy"/>
+  <relations source="//@components.3/@components.0" target="//@components.1/@components.0" typeName="Realization"/>
+  <relations source="//@components.3/@components.1" target="//@components.1/@components.1" typeName="Realization"/>
+  <relations source="//@components.4/@components.0" target="//@components.4/@components.1" typeName="UsedBy"/>
+  <relations source="//@components.4/@components.1" target="//@components.0/@components.2" typeName="Realization"/>
+  <relations source="//@components.4/@components.2" target="//@components.4/@components.4" typeName="Realization"/>
+  <relations source="//@components.4/@components.2" target="//@components.0/@components.1" typeName="Realization"/>
+  <relations source="//@components.4/@components.3" target="//@components.4/@components.0" typeName="Realization"/>
+  <relations source="//@components.4/@components.3" target="//@components.0/@components.0" typeName="Realization"/>
+  <relations source="//@components.4/@components.4" target="//@components.4/@components.3" typeName="UsedBy"/>
+  <relations source="//@components.5/@components.0" target="//@components.5/@components.1" typeName="Assignment"/>
+  <relations source="//@components.5/@components.1/@components.0" target="//@components.5/@components.1/@components.1" typeName="Triggering"/>
+  <relations source="//@components.5/@components.1/@components.1" target="//@components.2/@components.0" typeName="Realization"/>
+  <relations source="//@components.5/@components.1/@components.2" target="//@components.5/@components.1/@components.3" typeName="Triggering"/>
+  <relations source="//@components.5/@components.1/@components.2" target="//@components.2/@components.1" typeName="Realization"/>
+  <relations source="//@components.5/@components.1/@components.3" target="//@components.2/@components.2" typeName="Realization"/>
+  <relations source="//@components.5/@components.1/@components.3" target="//@components.5/@components.1/@components.0" typeName="Triggering"/>
+  <relations source="//@components.5/@components.2" target="//@components.5/@components.0" typeName="Assignment"/>
+  <relations source="//@components.6/@components.1" target="//@components.6/@components.0" typeName="Assignment"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="External Application Services">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer data mutation Service" typeName="BusinessService" relations="//@relations.0"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Application Service" typeName="BusinessService" relations="//@relations.1"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Premium Payment Service" typeName="BusinessService" relations="//@relations.2"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="External infrastructure services">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claim Files Service" typeName="InfrastructureService" relations="//@relations.3 //@relations.4"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer File Service" typeName="InfrastructureService" relations="//@relations.5 //@relations.6"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="External Business Services">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claims Payment Service" typeName="BusinessService" relations="//@relations.7"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claim Registration Service" typeName="BusinessService" relations="//@relations.8"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer Information Service" typeName="BusinessService" relations="//@relations.9"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Infrastructure">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Mainframe" typeName="Node" relations="//@relations.10">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="CICS" typeName="SystemSoftware"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="DBMS" typeName="SystemSoftware"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Message Queing" typeName="SystemSoftware"/>
+    </components>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="NAS File Server" typeName="Device" relations="//@relations.11"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Unix Server Farm" typeName="Node">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Unix Server" typeName="Device"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Unix Server" typeName="Device"/>
+    </components>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Application Components and Services">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claim InfoServ" typeName="ApplicationService" relations="//@relations.12"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Financial Application" typeName="ApplicationComponent" relations="//@relations.13"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="CRM System" typeName="ApplicationComponent" relations="//@relations.14 //@relations.15"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Policy Data Management" typeName="ApplicationComponent" relations="//@relations.16 //@relations.17"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="CIS" typeName="ApplicationService" relations="//@relations.18"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Business processes and internal actors / roles">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurer" typeName="BusinessRole" relations="//@relations.19"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Handle Claim" typeName="BusinessProcess">
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Valuate" typeName="BusinessProcess" relations="//@relations.20"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Pay" typeName="BusinessProcess" relations="//@relations.21"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Register" typeName="BusinessProcess" relations="//@relations.22 //@relations.23"/>
+      <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Accept" typeName="BusinessProcess" relations="//@relations.24 //@relations.25"/>
+    </components>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Archisurance" typeName="BusinessActor" relations="//@relations.26"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="External Roles and Actors">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurant" typeName="BusinessRole"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Client" typeName="BusinessActor" relations="//@relations.27"/>
+  </components>
+</co.edu.uniandes.iArchimate:Model>

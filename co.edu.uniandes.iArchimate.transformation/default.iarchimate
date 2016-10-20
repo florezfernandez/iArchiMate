@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Triggering"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Triggering"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Triggering"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Triggering"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Assignment"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Flow"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Flow"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Flow"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Flow"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Flow"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Specialisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Specialisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Specialisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Composition"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Composition"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Composition"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Specialisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Specialisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Aggregation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Flow"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Composition"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Composition"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="UsedBy"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Realisation"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <relations xsi:type="co.edu.uniandes.iArchimate:ContainmentRelation" name="Association"/>
+  <views name="Archimate View"/>
+  <views name="Layered View">
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Customer data mutation Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Insurance Application Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Premium Payment Service"/>
+    </elements>
+    <elements typeName="InfrastructureService">
+      <attributes name="name" value="Claim Files Service"/>
+    </elements>
+    <elements typeName="InfrastructureService">
+      <attributes name="name" value="Customer File Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claims Payment Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claim Registration Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Customer Information Service"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Mainframe"/>
+    </elements>
+    <elements typeName="Device">
+      <attributes name="name" value="NAS File Server"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Unix Server Farm"/>
+    </elements>
+    <elements typeName="ApplicationService">
+      <attributes name="name" value="Claim InfoServ"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Financial Application"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="CRM System"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Policy Data Management"/>
+    </elements>
+    <elements typeName="ApplicationService">
+      <attributes name="name" value="CIS"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Insurer"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Handle Claim"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Archisurance"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Insurant"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Client"/>
+    </elements>
+  </views>
+  <views name="Application Structure View">
+    <elements typeName="DataObject">
+      <attributes name="name" value="Insurance Policy Data"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Customer File Data"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Damage Claim Data"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Home &amp; Away Policy Administration"/>
+    </elements>
+  </views>
+  <views name="Technical Infrastructure View">
+    <elements typeName="InfrastructureService">
+      <attributes name="name" value="File Service"/>
+    </elements>
+    <elements typeName="InfrastructureService">
+      <attributes name="name" value="Network Service"/>
+    </elements>
+    <elements typeName="InfrastructureService">
+      <attributes name="name" value="Database Service"/>
+    </elements>
+    <elements typeName="Network">
+      <attributes name="name" value="BIBIT"/>
+    </elements>
+    <elements typeName="Device">
+      <attributes name="name" value="Admin Server"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Firewall"/>
+    </elements>
+    <elements typeName="Network">
+      <attributes name="name" value="LAN"/>
+    </elements>
+    <elements typeName="Network">
+      <attributes name="name" value="LAN"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Mainframe"/>
+    </elements>
+    <elements typeName="Device">
+      <attributes name="name" value="NAS File Server"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Unix Server Farm"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Firewall"/>
+    </elements>
+  </views>
+  <views name="Service Realisation View">
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Customer Information Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Premium Payment Service"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Handle Claim"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claims Payment Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Insurance Application Service"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Inform Customer"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Collect Premium"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Close Contract"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claim Registration Service"/>
+    </elements>
+  </views>
+  <views name="Business Process View">
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer"/>
+    </elements>
+    <elements typeName="BusinessEvent">
+      <attributes name="name" value="Damage Occured"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Customer File"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Damage Claim"/>
+    </elements>
+    <elements typeName="BusinessCollaboration">
+      <attributes name="name" value="Contracting"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Handle Claim"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Insurer"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Intermediary"/>
+    </elements>
+    <elements typeName="BusinessEvent">
+      <attributes name="name" value="Request for Insurance"/>
+    </elements>
+    <elements typeName="Representation">
+      <attributes name="name" value="Claim Form"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Close Contract"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Insurance Policy"/>
+    </elements>
+    <elements typeName="BusinessCollaboration">
+      <attributes name="name" value="Negotiation"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Customer File"/>
+    </elements>
+  </views>
+  <views name="Organisation Structure View">
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Archisurance"/>
+    </elements>
+  </views>
+  <views name="Business Function View">
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer's Bank"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Insurer"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Intermediary"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer"/>
+    </elements>
+  </views>
+  <views name="Information Structure View">
+    <elements typeName="DataObject">
+      <attributes name="name" value="Insurance Policy Data"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Insurance Request Data"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Legal aid  Insurance Policy"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Insurance Request"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Liability  Insurance Policy"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Insurance Policy"/>
+    </elements>
+    <elements typeName="Representation">
+      <attributes name="name" value="Claim Form"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Customer"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Travel  Insurance Policy"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Customer File Data"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Customer File"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Damage Claim"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Car Insurance Policy"/>
+    </elements>
+    <elements typeName="BusinessObject">
+      <attributes name="name" value="Home Insurance Policy"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Damage Claim Data"/>
+    </elements>
+  </views>
+  <views name="Application Behaviour View">
+    <elements typeName="DataObject">
+      <attributes name="name" value="Insurance Request Data"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Insurance Policy Data"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Home &amp; Away Policy Administration"/>
+    </elements>
+    <elements typeName="DataObject">
+      <attributes name="name" value="Customer File Data"/>
+    </elements>
+    <elements typeName="ApplicationService">
+      <attributes name="name" value="Policy Creation Service"/>
+    </elements>
+  </views>
+  <views name="Organisation Tree View">
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Board"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Legal Aid"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Document Processing SSC"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Finance"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="HRM"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Director of Sales"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Product Development"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Director of Finance"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Home  &amp;  Away"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Car"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Customer Relations"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Intermediary Relations"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Director of Operations"/>
+    </elements>
+  </views>
+  <views name="Business Product View">
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer"/>
+    </elements>
+    <elements typeName="Value">
+      <attributes name="name" value="Be Insured"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Customer Information Service"/>
+    </elements>
+    <elements typeName="Contract">
+      <attributes name="name" value="Travel Insurance Policy"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claims Payment Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Customer data mutation Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Insurance Application Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Premium Payment Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claim Registration Service"/>
+    </elements>
+  </views>
+  <views name="Actor Cooperation view">
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Intermediary"/>
+    </elements>
+    <elements typeName="BusinessCollaboration">
+      <attributes name="name" value="collaboration"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer's Bank"/>
+    </elements>
+    <elements typeName="BusinessInterface">
+      <attributes name="name" value="mail"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer"/>
+    </elements>
+    <elements typeName="BusinessInterface">
+      <attributes name="name" value="phone"/>
+    </elements>
+    <elements typeName="BusinessInterface">
+      <attributes name="name" value="GIM"/>
+    </elements>
+    <elements typeName="BusinessActor">
+      <attributes name="name" value="Archisurance"/>
+    </elements>
+    <elements typeName="BusinessInterface">
+      <attributes name="name" value="e-mail"/>
+    </elements>
+    <elements typeName="BusinessInterface">
+      <attributes name="name" value="phone"/>
+    </elements>
+  </views>
+  <views name="Business Cooperation View">
+    <elements typeName="ApplicationService">
+      <attributes name="name" value="CIS"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Insurance Application Service"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claims Payment Service"/>
+    </elements>
+    <elements typeName="ApplicationService">
+      <attributes name="name" value="Claim InfoServ"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Handle Claim"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Claim Registration Service"/>
+    </elements>
+    <elements typeName="BusinessRole">
+      <attributes name="name" value="Customer"/>
+    </elements>
+    <elements typeName="BusinessService">
+      <attributes name="name" value="Customer Information Service"/>
+    </elements>
+    <elements typeName="ApplicationService">
+      <attributes name="name" value="Policy Creation Service"/>
+    </elements>
+    <elements typeName="BusinessProcess">
+      <attributes name="name" value="Close Contract"/>
+    </elements>
+  </views>
+  <views name="Application Cooperation View">
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Bank System"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Home &amp; Away Policy Administration"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Policy Data Management"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Financial Application"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Customer Data  Access"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Call center application"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Web portal"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="CRM System"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Risk Assessment"/>
+    </elements>
+  </views>
+  <views name="Implementation and Installation View">
+    <elements typeName="Node">
+      <attributes name="name" value="Firewall"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Unix Server Farm"/>
+    </elements>
+    <elements typeName="Network">
+      <attributes name="name" value="LAN"/>
+    </elements>
+    <elements typeName="Device">
+      <attributes name="name" value="BIBIT Server"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Financial Application"/>
+    </elements>
+    <elements typeName="Device">
+      <attributes name="name" value="NAS File Server"/>
+    </elements>
+    <elements typeName="Network">
+      <attributes name="name" value="LAN"/>
+    </elements>
+    <elements typeName="Network">
+      <attributes name="name" value="BIBIT"/>
+    </elements>
+    <elements typeName="ApplicationComponent">
+      <attributes name="name" value="Bank System"/>
+    </elements>
+    <elements typeName="Node">
+      <attributes name="name" value="Firewall"/>
+    </elements>
+  </views>
+  <views name="Goal and Principle View">
+    <elements typeName="Principle">
+      <attributes name="name" value="Client Satisfaction Goal"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="One Stop Principle"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="Treatment Time Principle"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="Costs Goal"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="Occupancy Principle"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="Licence Principle"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="TCO Goal"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="Component Principle"/>
+    </elements>
+    <elements typeName="Principle">
+      <attributes name="name" value="Infrastructure Principle"/>
+    </elements>
+  </views>
+</co.edu.uniandes.iArchimate:Model>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.1" target="//@components.2" typeName="Association"/>
+  <relations source="//@components.2" target="//@components.0/@components.5" typeName="Association"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Group" name="Travel Insurance">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer Information Service" typeName="BusinessService"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Travel Insurance Policy" typeName="Contract"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claims Payment Service" typeName="BusinessService"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer data mutation Service" typeName="BusinessService"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurance Application Service" typeName="BusinessService"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Premium Payment Service" typeName="BusinessService"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claim Registration Service" typeName="BusinessService"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer" typeName="BusinessRole" relations="//@relations.0"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Be Insured" typeName="Value" relations="//@relations.1"/>
+</co.edu.uniandes.iArchimate:Model>

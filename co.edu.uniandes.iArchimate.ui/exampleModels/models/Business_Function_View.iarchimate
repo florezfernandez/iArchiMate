@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<co.edu.uniandes.iArchimate:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.edu.uniandes.iArchimate="http://co/edu/uniandes/iArchimate">
+  <relations source="//@components.0" target="//@components.1/@components.5" typeName="Flow"/>
+  <relations source="//@components.1/@components.0" target="//@components.1/@components.1" typeName="Flow" name="asset info"/>
+  <relations source="//@components.1/@components.0" target="//@components.1/@components.5" typeName="Flow"/>
+  <relations source="//@components.1/@components.1" target="//@components.1/@components.2" typeName="Flow" name="contract info"/>
+  <relations source="//@components.1/@components.1" target="//@components.1/@components.0" typeName="Flow" name="contract info."/>
+  <relations source="//@components.1/@components.2" target="//@components.1/@components.1" typeName="Flow" name="customer information"/>
+  <relations source="//@components.1/@components.2" target="//@components.2" typeName="Flow" name="product info."/>
+  <relations source="//@components.1/@components.3" target="//@components.1/@components.4" typeName="Flow"/>
+  <relations source="//@components.1/@components.3" target="//@components.3" typeName="Flow" name="insurance info"/>
+  <relations source="//@components.1/@components.4" target="//@components.1/@components.5" typeName="Flow"/>
+  <relations source="//@components.1/@components.4" target="//@components.3" typeName="Flow" name="claim info"/>
+  <relations source="//@components.1/@components.4" target="//@components.1/@components.3" typeName="Flow"/>
+  <relations source="//@components.1/@components.5" target="//@components.1/@components.0" typeName="Flow" name="money"/>
+  <relations source="//@components.1/@components.5" target="//@components.1/@components.4" typeName="Flow"/>
+  <relations source="//@components.1/@components.5" target="//@components.0" typeName="Flow"/>
+  <relations source="//@components.2" target="//@components.1/@components.2" typeName="Flow" name="cust. info"/>
+  <relations source="//@components.2" target="//@components.3" typeName="Flow" name="Product Information"/>
+  <relations source="//@components.3" target="//@components.2" typeName="Flow" name="Customer Information"/>
+  <relations source="//@components.3" target="//@components.1/@components.3" typeName="Flow" name="claims"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer's Bank" typeName="BusinessRole" relations="//@relations.0"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Insurer" typeName="BusinessRole">
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Asset Management" typeName="BusinessFunction" relations="//@relations.1 //@relations.2"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Contracting" typeName="BusinessFunction" relations="//@relations.3 //@relations.4"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Maintaining Intermediary Relations" typeName="BusinessFunction" relations="//@relations.5 //@relations.6"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Maintaining Customer Relations" typeName="BusinessFunction" relations="//@relations.7 //@relations.8"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Claims Handling" typeName="BusinessFunction" relations="//@relations.9 //@relations.10 //@relations.11"/>
+    <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Financial Handling" typeName="BusinessFunction" relations="//@relations.12 //@relations.13 //@relations.14"/>
+  </components>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Intermediary" typeName="BusinessRole" relations="//@relations.15 //@relations.16"/>
+  <components xsi:type="co.edu.uniandes.iArchimate:Element" name="Customer" typeName="BusinessRole" relations="//@relations.17 //@relations.18"/>
+</co.edu.uniandes.iArchimate:Model>
